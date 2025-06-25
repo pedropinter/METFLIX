@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>METFLIX</title>
+  <style>
+    body {
+  font-family: Verdana;
+  background-color: #1C1C1C;
+  margin: 0;
+  padding: 20px;
+  color: #d81b60;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #8B0000;
+  font-family: 'Playfair Display', serif;
+}
+
+form, #cards-container {
+  background-color: #fafcff;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(74, 60, 74, 0.15);
+  max-width: 600px;
+}
+
+input, button {
+  display: block;
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+
+input {
+  border: 1.8px solid #000000;
+  border-radius: 12px;
+  background: rgb(110 123 183 / 11%);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: #3e3c4a;
+  outline: none;
+}
+
+input:focus {
+  border-color: #000000;
+  box-shadow: 0 0 6px #680101;
+}
+
+button {
+  width: 100%;
+  background-color: #8B0000;
+  color: #f9f0f7;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(79, 77, 169, 0.4);
+  transition: background-color 0.3s ease;
+  letter-spacing: 0.05em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+  background-color: #680101;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #fdfdfd;
+  color: #3e3c4a;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: #8B0000;
+  font-family: 'Playfair Display', serif;
+}
+
+.card button {
+  margin-right: 10px;
+  background-color: #8B0000;
+  color: #f9f0f7;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(175, 9, 9, 0.806);
+  transition: background-color 0.3s ease;
+  letter-spacing: 0.05em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card button:hover {
+  background-color: #680101;
+}
+#form-title {
+  text-align: center;
+  color: #8B0000;
+  font-family: 'Playfair Display', serif;
+} 
+  </style>
+</head>
+<body>
+
+  <h1>Gerenciador de Filmes</h1>
+
+  <form id="formFilme">
+    <h2 id="form-title">Adicionar Filme</h2>
+    <input type="text" id="nome" placeholder="Nome do Filme" required />
+    <input type="text" id="genero" placeholder="Gênero" required />
+    <input type="number" id="duracao" placeholder="Duração (min)" required />
+    <button type="submit">Salvar</button>
+  </form>
+
+  <div id="cards-container"></div>
+
+  <script src="./js/movies.js"></script>
+</body>
+</html>
